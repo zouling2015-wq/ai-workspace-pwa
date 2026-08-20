@@ -69,3 +69,105 @@ dialog::backdrop{background:rgba(17,24,39,.45);backdrop-filter:blur(4px)}
   .card-grid{grid-template-columns:repeat(3,1fr)}
   .project-card{min-height:220px}
 }
+
+
+/* ===== PWA v2 mobile interaction fixes ===== */
+.view-note{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.55;
+  margin:2px 0 14px;
+}
+.inbox-list{display:grid;gap:10px}
+.inbox-item{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:15px;
+  box-shadow:var(--shadow);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+}
+.inbox-item p{
+  margin:0;
+  font-size:14px;
+  line-height:1.55;
+  word-break:break-word;
+}
+.inbox-item time{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:7px;
+}
+.delete-btn,.text-btn{
+  border:0;
+  background:#f3f4f6;
+  color:#4b5563;
+  border-radius:12px;
+  padding:10px 12px;
+  min-height:44px;
+  font-weight:700;
+  cursor:pointer;
+}
+.empty-card,.settings-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.empty-card p{
+  color:var(--muted);
+  line-height:1.55;
+  margin-bottom:0;
+}
+.settings-card div{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+.settings-card div:last-child{border-bottom:0}
+
+/* Bigger touch targets on phones */
+.nav-item,.quick-add,.install-btn,.dialog-actions button,
+.delete-btn,.text-btn{
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-item{
+  min-height:52px;
+  cursor:pointer;
+}
+.quick-add{
+  cursor:pointer;
+}
+@media (max-width:699px){
+  .app-shell{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .topbar{align-items:center}
+  .install-btn{min-height:44px}
+  .bottom-nav{
+    padding-left:8px;
+    padding-right:8px;
+  }
+  .nav-item span:last-child{
+    font-size:11px;
+  }
+  .project-card,.waiting-item,.focus-card{
+    -webkit-tap-highlight-color:transparent;
+  }
+  dialog{
+    width:min(94vw,520px);
+  }
+  .dialog-actions button{
+    min-height:46px;
+  }
+}

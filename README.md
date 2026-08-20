@@ -38,3 +38,12 @@ http://localhost:8080
 
 ## 下一步建议
 把此 PWA 的 UI 和 Manifest / Service Worker 结构合并进你现有的 AI 工作台，而不是长期维护两套独立项目。
+
+
+## PWA v2 修正
+- Quick Capture 保存后可在 Inbox 中查看
+- Inbox 支持单条删除、全部清空
+- 底部 Today / Projects / Inbox / Me 均可实际切换
+- 手机按钮点击区域增大
+- Service Worker 缓存版本升级为 v2
+- 当前 Inbox 数据仍为本机 localStorage，不会跨设备同步

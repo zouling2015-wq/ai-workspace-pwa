@@ -1,5 +1,5 @@
 
-const CACHE = 'ai-workspace-v1';
+const CACHE = 'ai-workspace-v2';
 const ASSETS = [
   './',
   './index.html',
