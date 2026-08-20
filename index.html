@@ -25,6 +25,7 @@
     </header>
 
     <main>
+      <div id="homeView" class="view">
       <section class="hero">
         <div>
           <span class="section-kicker">TODAY</span>
@@ -131,7 +132,9 @@
         </ol>
       </section>
 
-      <section class="projects-view hidden-view" id="projectsView">
+      </div>
+
+      <section class="projects-view hidden-view view" id="projectsView">
         <div class="section-head">
           <div>
             <span class="section-kicker">PROJECTS</span>
@@ -148,6 +151,34 @@
           <div><strong>LPIC-2</strong><span>PARKING</span></div>
         </div>
       </section>
+
+      <section class="hidden-view view" id="inboxView">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">INBOX</span>
+            <h2>快速记录</h2>
+          </div>
+          <button class="text-btn" id="clearInboxBtn">全部清空</button>
+        </div>
+        <p class="view-note">你通过中间的「＋」保存的内容会显示在这里。目前保存在当前设备本地。</p>
+        <div class="inbox-list" id="inboxList"></div>
+      </section>
+
+      <section class="hidden-view view" id="meView">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">ME</span>
+            <h2>工作台设置</h2>
+          </div>
+        </div>
+        <div class="settings-card">
+          <div><span>版本</span><strong>PWA v2</strong></div>
+          <div><span>Quick Capture</span><strong>可查看 / 可删除</strong></div>
+          <div><span>当前数据保存</span><strong>本机 localStorage</strong></div>
+          <div><span>云同步</span><strong>未启用</strong></div>
+        </div>
+      </section>
+
     </main>
 
     <nav class="bottom-nav" aria-label="Primary">
@@ -158,8 +189,8 @@
         <span class="nav-icon">▦</span><span>Projects</span>
       </button>
       <button class="quick-add" id="quickAdd" aria-label="Quick capture">＋</button>
-      <button class="nav-item" data-view="calendar">
-        <span class="nav-icon">□</span><span>Calendar</span>
+      <button class="nav-item" data-view="inbox">
+        <span class="nav-icon">≡</span><span>Inbox</span>
       </button>
       <button class="nav-item" data-view="me">
         <span class="nav-icon">○</span><span>Me</span>
