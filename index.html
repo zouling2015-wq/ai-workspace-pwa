@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AI Workspace" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>AI Workspace</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">AI WORKSPACE</div>
+        <h1 id="greeting">Good morning</h1>
+        <p id="todayLabel" class="muted"></p>
+      </div>
+      <button id="installBtn" class="install-btn hidden">安装 App</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="section-kicker">TODAY</span>
+          <h2>现在最应该做什么？</h2>
+        </div>
+        <div class="focus-card">
+          <span class="badge badge-red">TOP PRIORITY</span>
+          <h3>AI翻译工具比较资料</h3>
+          <p>完成 8/26 会议资料的结构与主要比较结论。</p>
+          <div class="meta-row">
+            <span>Deadline · Aug 26</span>
+            <span>75%</span>
+          </div>
+          <div class="progress"><span style="width:75%"></span></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">NOW</span>
+            <h2>当前重点</h2>
+          </div>
+          <span class="count">3 projects</span>
+        </div>
+
+        <div class="card-grid" id="nowGrid">
+          <article class="project-card">
+            <div class="project-top">
+              <span class="badge badge-red">ACTIVE</span>
+              <span class="progress-text">75%</span>
+            </div>
+            <h3>AI Translation Tool</h3>
+            <p class="next-label">NEXT ACTION</p>
+            <p class="next-action">完成 DeepL / Notta / RTT 比较资料</p>
+            <div class="progress"><span style="width:75%"></span></div>
+            <div class="meta-row"><span>Aug 26</span><span>Updated today</span></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="badge badge-blue">ACTIVE</span>
+              <span class="progress-text">55%</span>
+            </div>
+            <h3>Overseas Monthly Report</h3>
+            <p class="next-label">NEXT ACTION</p>
+            <p class="next-action">整理 SG Test 流程与自动整形方案</p>
+            <div class="progress"><span style="width:55%"></span></div>
+            <div class="meta-row"><span>September test</span><span>Updated today</span></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="badge badge-purple">ACTIVE</span>
+              <span class="progress-text">40%</span>
+            </div>
+            <h3>AI Workspace</h3>
+            <p class="next-label">NEXT ACTION</p>
+            <p class="next-action">完成手机版 PWA v1</p>
+            <div class="progress"><span style="width:40%"></span></div>
+            <div class="meta-row"><span>No deadline</span><span>Updated today</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">WAITING</span>
+            <h2>等待中</h2>
+          </div>
+          <span class="count">2 items</span>
+        </div>
+
+        <div class="waiting-list">
+          <article class="waiting-item">
+            <div>
+              <strong>DeepL Trial 延长</strong>
+              <p>等待 Vendor 回复</p>
+            </div>
+            <span class="waiting-days">Waiting</span>
+          </article>
+          <article class="waiting-item">
+            <div>
+              <strong>SG 月报数据</strong>
+              <p>等待海外提交</p>
+            </div>
+            <span class="waiting-days">Follow-up</span>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">THIS WEEK</span>
+            <h2>本周重点</h2>
+          </div>
+        </div>
+        <ol class="week-list">
+          <li><span>01</span>完成 AI 翻译工具会议资料</li>
+          <li><span>02</span>整理 SG 月报自动化 Test 方案</li>
+          <li><span>03</span>确认 Waiting 项并 Follow-up</li>
+        </ol>
+      </section>
+
+      <section class="projects-view hidden-view" id="projectsView">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">PROJECTS</span>
+            <h2>全部项目</h2>
+          </div>
+        </div>
+        <div class="project-list">
+          <div><strong>AI Translation Tool</strong><span>NOW</span></div>
+          <div><strong>Overseas Monthly Report</strong><span>NOW</span></div>
+          <div><strong>AI Workspace</strong><span>NOW</span></div>
+          <div><strong>Microsoft 365 / Agent</strong><span>LEARNING</span></div>
+          <div><strong>GitHub / AI Lab</strong><span>NEXT</span></div>
+          <div><strong>AI Animation</strong><span>PARKING</span></div>
+          <div><strong>LPIC-2</strong><span>PARKING</span></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <button class="nav-item active" data-view="home">
+        <span class="nav-icon">⌂</span><span>Today</span>
+      </button>
+      <button class="nav-item" data-view="projects">
+        <span class="nav-icon">▦</span><span>Projects</span>
+      </button>
+      <button class="quick-add" id="quickAdd" aria-label="Quick capture">＋</button>
+      <button class="nav-item" data-view="calendar">
+        <span class="nav-icon">□</span><span>Calendar</span>
+      </button>
+      <button class="nav-item" data-view="me">
+        <span class="nav-icon">○</span><span>Me</span>
+      </button>
+    </nav>
+  </div>
+
+  <dialog id="captureDialog">
+    <form method="dialog" class="dialog-card">
+      <div class="section-kicker">QUICK CAPTURE</div>
+      <h2>记下一个想法</h2>
+      <textarea id="captureText" placeholder="例如：调查一个新的 GitHub 项目"></textarea>
+      <div class="dialog-actions">
+        <button value="cancel" class="secondary">取消</button>
+        <button id="saveCapture" value="default">保存到 Inbox</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
